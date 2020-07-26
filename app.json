@@ -17,7 +17,14 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vation.assignment",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "627296556054-18qrqju0jg7asvda2rtq1qjcrhdn9hb9.apps.googleusercontent.com"
+        }
+      },
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "web": {
       "favicon": "./assets/favicon.png"
