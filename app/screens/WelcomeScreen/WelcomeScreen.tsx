@@ -8,14 +8,26 @@ import MiddleSection from './Sections/MiddleSection';
 import BottomSection from './Sections/BottomSection';
 
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({ navigation: { navigate } }) {
+
+  const onGoogleUserAuthenticated = () => {
+    navigate('Home');
+  }
+
+  const onSignUpWithEmailPress = () => {
+    navigate('Login');
+  }
+
+
   return (
     <LinearGradient
       style={styles.container}
       colors={[StyleConfigs.colors.screenGradient.start, StyleConfigs.colors.screenGradient.end]}>
       <HeaderSection style={styles.headerView} />
       <MiddleSection style={styles.middleView} />
-      <BottomSection style={styles.bottomView} />
+      <BottomSection style={styles.bottomView}
+        googleUserAuthenticated={onGoogleUserAuthenticated}
+        signUpWithEmailPress={onSignUpWithEmailPress} />
     </LinearGradient>
   );
 
@@ -36,5 +48,5 @@ const styles = StyleSheet.create({
   bottomView: {
     flex: 3
   },
-  
+
 });

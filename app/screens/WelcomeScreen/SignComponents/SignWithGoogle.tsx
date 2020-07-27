@@ -8,19 +8,25 @@ import SharedStyles from '../SharedStyles'
 import StyleConfigs from '../StyleConfigs'
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
+interface IProps {
+    onUserAuthenticated: () => void;
+}
 
 
-export default function SignWithGoogle() {
+export default function SignWithGoogle(props: IProps) {
 
-    // let [authState, setAuthState] = useState(null);
+    const { onUserAuthenticated } = props;
     let [showLoding, setShowLoding] = useState<boolean>(false);
 
     async function signInAsync() {
-        try{
-            let authState = await AppAuth.authAsync(config);
-            return authState;
+        try {
+            setShowLoding(true);
+            await AppAuth.authAsync(config);
+            onUserAuthenticated();
+            // navigation.navigate('Home')
         }
-        finally{
+        catch (e) { }
+        finally {
             setShowLoding(false);
         }
     }
@@ -30,10 +36,7 @@ export default function SignWithGoogle() {
             titleStyle={SharedStyles.signInButtonText}
             loading={showLoding}
 
-            onPress={async () => {
-                setShowLoding(true);
-                const _authState = await signInAsync();
-            }}
+            onPress={async () => await signInAsync()}
             icon={
                 <Icon
                     name="google"

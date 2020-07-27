@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Platform } from 'react-native';
 import SharedStyles from '../SharedStyles'
 import StyleConfigs from '../StyleConfigs'
 import { ViewStyleProp } from '../../../Shared/Props';
@@ -14,8 +14,6 @@ export default function HeaderSection({style}: ViewStyleProp) {
         </Text>
         </View>
     );
-
-
 }
 
 const styles = StyleSheet.create({
@@ -23,7 +21,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         left: "8.8%",
         right: "5.07%",
-        top: 110,
+        top: Platform.OS === 'ios' ? 110 : 50,
 
         fontFamily: StyleConfigs.fonts.Avenir,
         fontStyle: "normal",
