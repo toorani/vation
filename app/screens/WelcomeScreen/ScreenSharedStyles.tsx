@@ -1,5 +1,5 @@
 import {  StyleSheet } from 'react-native';
-import StyleConfigs from './StyleConfigs'
+import StyleConfigs from './WelcomeStyleConfigs'
 
 const  styles = StyleSheet.create({
     textColor: {

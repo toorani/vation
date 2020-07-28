@@ -2,20 +2,23 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
 
-import StyleConfigs from './StyleConfigs'
+import StyleConfigs from './WelcomeStyleConfigs'
 import HeaderSection from './Sections/HeaderSection';
 import MiddleSection from './Sections/MiddleSection';
 import BottomSection from './Sections/BottomSection';
+import SampleData from '../../DataModels/SampleData';
 
 
 export default function WelcomeScreen({ navigation: { navigate } }) {
 
   const onGoogleUserAuthenticated = () => {
-    navigate('Home');
+    navigate('Home', { data: new SampleData() });
   }
 
   const onSignUpWithEmailPress = () => {
-    navigate('Login');
+    // navigate('Login');
+    navigate('Home', { data: new SampleData() });
+
   }
 
 

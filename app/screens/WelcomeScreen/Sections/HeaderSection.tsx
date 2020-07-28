@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, Platform } from 'react-native';
-import SharedStyles from '../SharedStyles'
-import StyleConfigs from '../StyleConfigs'
+import SharedStyles from '../ScreenSharedStyles'
+import StyleConfigs from '../WelcomeStyleConfigs'
 import { ViewStyleProp } from '../../../Shared/Props';
 
 

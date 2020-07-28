@@ -4,8 +4,8 @@ import { Button } from 'react-native-elements';
 import * as AppAuth from 'expo-app-auth';
 
 
-import SharedStyles from '../SharedStyles'
-import StyleConfigs from '../StyleConfigs'
+import SharedStyles from '../ScreenSharedStyles'
+import StyleConfigs from '../WelcomeStyleConfigs'
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 interface IProps {

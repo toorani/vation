@@ -2,17 +2,16 @@ import { Platform } from "react-native";
 
 export default {
     colors: {
-        screenBgColor: '#333A4D',
         screenGradient: {
             start: '#33394c',
             end: '#010101'
         },
         textColor: '#FFFFFF',
         buttons: {
-            appleBgColor: '#000000',
-            googleBgColor: '#0088FF',
-            emailBgColor: '#5BC58B'
-        }
+            doneBgColor: '#5BC58C',
+            playBgColor: '#6C9EFE',
+        },
+        iconColor:'#fff'
     },
     fonts: {
         Avenir: Platform.OS === 'android' ? 'System' : 'Avenir',
@@ -20,9 +19,6 @@ export default {
         SFProText :'System'
     },
     icons:{
-        marginRight : 8,
-        size : 24,
-         
+        size : 14,
     }
-
 }

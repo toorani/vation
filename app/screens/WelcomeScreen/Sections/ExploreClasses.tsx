@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import SharedStyles from '../SharedStyles'
-import StyleConfigs from '../StyleConfigs'
+import SharedStyles from '../ScreenSharedStyles'
+import StyleConfigs from '../WelcomeStyleConfigs'
 
 
 export default function ExploreClasses() {

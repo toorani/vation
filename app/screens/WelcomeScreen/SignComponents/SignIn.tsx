@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-native-elements';
-import SharedStyles from '../SharedStyles'
+import SharedStyles from '../ScreenSharedStyles'
 
 
 export default function SignIn() {

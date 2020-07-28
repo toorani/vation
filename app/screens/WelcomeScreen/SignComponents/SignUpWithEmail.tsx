@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements';
-import SharedStyles from '../SharedStyles'
-import StyleConfigs from '../StyleConfigs'
+import SharedStyles from '../ScreenSharedStyles'
+import StyleConfigs from '../WelcomeStyleConfigs'
 
 interface IProps {
     onPress: () => void;
