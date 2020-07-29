@@ -5,7 +5,7 @@ import SharedStyles from '../ScreenSharedStyles'
 import StyleConfigs from '../WelcomeStyleConfigs'
 
 interface IProps {
-    onPress: () => void;
+    onPress?: () => void;
 }
 
 export default function SignUpWithEmail(props: IProps) {

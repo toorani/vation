@@ -15,9 +15,8 @@ export default function WelcomeScreen({ navigation: { navigate } }) {
     navigate('Home', { data: new SampleData() });
   }
 
-  const onSignUpWithEmailPress = () => {
-    // navigate('Login');
-    navigate('Home', { data: new SampleData() });
+  const onLoginPress = () => {
+    navigate('Login');
 
   }
 
@@ -30,7 +29,7 @@ export default function WelcomeScreen({ navigation: { navigate } }) {
       <MiddleSection style={styles.middleView} />
       <BottomSection style={styles.bottomView}
         googleUserAuthenticated={onGoogleUserAuthenticated}
-        signUpWithEmailPress={onSignUpWithEmailPress} />
+        loginPress={onLoginPress} />
     </LinearGradient>
   );
 

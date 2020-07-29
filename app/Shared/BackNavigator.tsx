@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
         lineHeight: 16,
         letterSpacing: 0.192,
         color: '#FFFFFF',
-        marginLeft: 5,
-        top: 2,
+        marginLeft: 1,
+        top: 5,
     },
     icons: {
         marginRight: 5,

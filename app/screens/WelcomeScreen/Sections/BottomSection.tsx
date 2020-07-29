@@ -10,17 +10,17 @@ import ExploreClasses from './ExploreClasses';
 interface IProps {
     style: StyleProp<ViewStyle>,
     googleUserAuthenticated: () => void;
-    signUpWithEmailPress: () => void;
+    loginPress: () => void;
 }
 
 export default function BottomSection(props: IProps) {
-    const { style, googleUserAuthenticated, signUpWithEmailPress } = props;
+    const { style, googleUserAuthenticated, loginPress } = props;
     return (
         <View style={style}>
             <SignWithApple />
             <SignWithGoogle onUserAuthenticated={googleUserAuthenticated} />
-            <SignUpWithEmail onPress={signUpWithEmailPress} />
-            <SignIn />
+            <SignUpWithEmail />
+            <SignIn onPress={loginPress}/>
             <ExploreClasses />
         </View>
     );
